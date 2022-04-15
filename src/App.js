@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Routes, Route, Outlet } from 'react-router-dom';
+import { Layout } from './components/layout/layout.component';
+import SideBar from './components/side-bar/side-bar.component'
+import TeamsPage from './routes/teams-page/teams-page.component';
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+        <Route index element={<TeamsPage/>}/>
+        <Route path='team' element={<div/>}/>
+      </Route>
+    </Routes>
   );
 }
 
