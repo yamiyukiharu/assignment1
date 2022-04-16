@@ -20,6 +20,7 @@ export const AppName = styled.div`
 export const Divider = styled.div`
     background: #E2E2E2;
     width: 1px;
+    margin-right: auto;
 `;
 
 export const Title = styled.div`
@@ -29,8 +30,4 @@ export const Title = styled.div`
     justify-content: center;
     align-items: center;
     margin: 41px 32px 41px 26px;
-`;
-
-export const Spacer = styled.div`
-    flex-grow: 1;
 `;

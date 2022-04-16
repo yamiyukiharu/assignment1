@@ -1,7 +1,7 @@
 
 import MenuSettings from "../menu-settings/menu-settings.component";
 import NotificationIcon from "../notification-icon/notification-icon.component";
-import { NavBarContainer, AppName, Divider, Title, Spacer } from "./nav-bar.styles";
+import { NavBarContainer, AppName, Divider, Title } from "./nav-bar.styles";
 
 const NavBar = () => {
     return (
@@ -9,7 +9,6 @@ const NavBar = () => {
             <AppName>NARWHAL</AppName>
             <Divider/>
             <Title>Teams</Title>
-            <Spacer/>
             <NotificationIcon/>
             <MenuSettings/>
         </NavBarContainer>
