@@ -3,7 +3,6 @@ import styled from "styled-components"
 export const NavBarContainer = styled.div`
     box-sizing: border-box;
     height: 80px;
-    flex-grow: 1;
     border-bottom: 1px solid #E2E2E2;
     display: flex;
 `;

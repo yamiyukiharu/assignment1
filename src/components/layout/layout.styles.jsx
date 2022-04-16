@@ -11,4 +11,8 @@ export const LayoutContainer = styled.div`
 
 export const Page = styled.div`
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow: clip;
 `;

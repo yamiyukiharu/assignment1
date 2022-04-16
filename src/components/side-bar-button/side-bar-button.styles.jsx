@@ -8,6 +8,7 @@ export const SideBarButtonContainer = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: white;
 
     opacity: ${({type}) => type === 'logo' ? 1.0 : 0.3};
 

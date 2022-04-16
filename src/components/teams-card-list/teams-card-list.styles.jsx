@@ -1,0 +1,31 @@
+import styled from "styled-components"
+
+export const TeamsCardListContainer = styled.div`
+    box-sizing: border-box;
+    height:1000px;
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    box-shadow: 0 0 2px rgba(0,0,0,0.4);
+`;
+
+export const Header = styled.div`
+    box-sizing: border-box;
+    height: 70px;
+    padding: 28px 33px 17px 30px;
+    border-bottom: 1px solid #EFEFEF;
+    display: flex;
+    justify-content: space-between;
+    
+`;
+
+export const Title = styled.div`
+    font-size: 18px;
+`;
+
+export const ShowingItemsHint = styled.div`
+    color: #7F7F7F;
+`;
+
+export const Cards = styled.div`
+    padding: 31px 27px 31px 27px;
+`;
