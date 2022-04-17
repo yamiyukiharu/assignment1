@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import CONSTANTS from "../../constants";
 
 export const TeamsCardListContainer = styled.div`
     box-sizing: border-box;
@@ -8,6 +9,11 @@ export const TeamsCardListContainer = styled.div`
     box-shadow: 0 0 2px rgba(0,0,0,0.4);
     
     height: fit-content;
+    flex: 0 1 auto;
+
+    /* width: ${({pageWidth}) => 
+        `${pageWidth-500}px`}; */
+    
 
 `;
 
@@ -34,4 +40,5 @@ export const Cards = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 16px 13px;
+
 `;

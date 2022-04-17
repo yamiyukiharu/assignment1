@@ -12,6 +12,8 @@ export const TeamsPageContent = styled.div`
     box-sizing: border-box;
     display: flex;
     padding: 42px 39px 39px 42px;
+    justify-content: space-between;
+    column-gap: 33px;
     
     flex: 1 1 auto;
     overflow: auto;

@@ -7,20 +7,26 @@ import { ReactComponent as CampaignIconSvg} from '../../assets/icon-conversation
 export const TeamCardContainer = styled.div`
     box-sizing: border-box;
     height: 181px;
-    max-width: 307px;
+    width: 307px;
     border: 1px solid #E4E7EC;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 0;
 `;
 
 export const Header = styled.div`
-    padding: 16px 14px 15px 16px;
+    padding: 0px 14px 0px 16px;
     display: flex;
-    justify-content: space-between;
-    row-gap: 16px;
-    flex-wrap: wrap;
+    flex-direction: column;
     border-bottom: 1px solid #E4E7EC;
+`;
+
+export const HeaderRow = styled.div`
+    margin-top: 16px;
+    display: flex;
+
 `;
 
 export const Avatar = styled.img`
@@ -62,12 +68,19 @@ export const FavouriteStarIcon = styled(StarIconSvg)`
 export const Description = styled.div`
     color: #565656;
     font-size: 14px;
-    height: 34px;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+            line-clamp: 2; 
+    -webkit-box-orient: vertical;
 `;
 
 export const Details = styled.div`
     box-sizing: border-box;
-    flex-grow: 1;
+    height: 59px;
     padding-left: 17px;
     display: flex;
     align-items: center;

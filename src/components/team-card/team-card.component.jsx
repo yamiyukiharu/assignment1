@@ -1,4 +1,4 @@
-import { Avatar, TeamCardContainer, CreatedAt, Description, Details, Header, Name, NameContainer, FavouriteStarIcon, CampaignIcon, LeadsIcon } from "./team-card.styles";
+import { Avatar, TeamCardContainer, CreatedAt, Description, Details, Header, Name, NameContainer, FavouriteStarIcon, CampaignIcon, LeadsIcon, HeaderRow } from "./team-card.styles";
 
 
 const TeamCard = ({team}) => {
@@ -17,14 +17,16 @@ const TeamCard = ({team}) => {
     return (
         <TeamCardContainer>
             <Header>
+            <HeaderRow>
                 <Avatar src={image}/>
                 <NameContainer>
                     <Name>{name}</Name>
                     <CreatedAt>Created {created_at}</CreatedAt>
                 </NameContainer>
-                <FavouriteStarIcon/>
-                <Description>{description.slice(0, 70)} ...</Description>
-            </Header>            
+                <FavouriteStarIcon/>            
+            </HeaderRow>
+            <Description>{description} </Description>
+            </Header>
             <Details>
                 <CampaignIcon/>
                 <span>{campaigns_count} Campaigns</span>

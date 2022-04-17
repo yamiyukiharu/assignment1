@@ -10,6 +10,7 @@ export const TeamPageHeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-shrink: 0;
     
 `;
 
