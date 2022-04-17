@@ -5,6 +5,7 @@ export const NavBarContainer = styled.div`
     height: 80px;
     border-bottom: 1px solid #E2E2E2;
     display: flex;
+    
 `;
 
 export const AppName = styled.div`
@@ -20,7 +21,6 @@ export const AppName = styled.div`
 export const Divider = styled.div`
     background: #E2E2E2;
     width: 1px;
-    margin-right: auto;
 `;
 
 export const Title = styled.div`
@@ -30,4 +30,5 @@ export const Title = styled.div`
     justify-content: center;
     align-items: center;
     margin: 41px 32px 41px 26px;
+    margin-right: auto;
 `;

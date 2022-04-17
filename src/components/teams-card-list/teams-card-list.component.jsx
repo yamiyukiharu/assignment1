@@ -6,16 +6,17 @@ import AppDataJson from '../../utils/app-data';
 const TeamsCardList = () => {
 
     const {teams} = AppDataJson;
-    const team1 = teams[0];
 
     return (
         <TeamsCardListContainer>
             <Header>
                 <Title>All Teams</Title>
-                <ShowingItemsHint>Showing {65} of {65} teams</ShowingItemsHint>
+                <ShowingItemsHint>Showing {teams.length} of {teams.length} teams</ShowingItemsHint>
             </Header>
             <Cards>
-                <TeamCard team={team1}/>
+                {
+                    teams.map((team) => <TeamCard team={team}/>)
+                }
             </Cards>
         </TeamsCardListContainer>
     )

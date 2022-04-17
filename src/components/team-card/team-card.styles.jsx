@@ -7,12 +7,11 @@ import { ReactComponent as CampaignIconSvg} from '../../assets/icon-conversation
 export const TeamCardContainer = styled.div`
     box-sizing: border-box;
     height: 181px;
-    width: 307px;
+    max-width: 307px;
     border: 1px solid #E4E7EC;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    
 `;
 
 export const Header = styled.div`

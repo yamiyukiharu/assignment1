@@ -2,10 +2,13 @@ import styled from "styled-components"
 
 export const TeamsCardListContainer = styled.div`
     box-sizing: border-box;
-    height:1000px;
     background-color: #FFFFFF;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 0 2px rgba(0,0,0,0.4);
+    
+    height: fit-content;
+
 `;
 
 export const Header = styled.div`
@@ -28,4 +31,7 @@ export const ShowingItemsHint = styled.div`
 
 export const Cards = styled.div`
     padding: 31px 27px 31px 27px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 13px;
 `;

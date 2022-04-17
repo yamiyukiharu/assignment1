@@ -12,7 +12,7 @@ export const Tab = styled.div`
     align-items: center;
     padding: 0px 20px 0px 20px;
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     color: ${({isSelected}) => isSelected ? '#0083E3': '#000000'};
     border-bottom: ${({isSelected}) => isSelected? '3px solid #0083E3' : '3px solid transparent'};
 

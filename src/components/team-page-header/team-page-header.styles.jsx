@@ -3,13 +3,14 @@ import { ReactComponent as TeamsIconSvg } from '../../assets/icon-teams.svg'
 
 export const TeamPageHeaderContainer = styled.div`
     box-sizing: border-box;
-    height: 146px;
+    height: 156px;
     width: 100%;
     padding: 30px 38px 0px 42px;
     background-color: #FFFFFF;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 `;
 
 export const FirstRow = styled.div`

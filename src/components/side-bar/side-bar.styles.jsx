@@ -6,6 +6,7 @@ export const SideBarContainer = styled.div`
         inset -4px 0px 4px rgba(2, 15, 24, 0.569466);
     display: flex;
     flex-direction: column;
+    
 `;
 
 export const Spacer = styled.div`

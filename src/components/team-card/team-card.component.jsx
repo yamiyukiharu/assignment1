@@ -23,7 +23,7 @@ const TeamCard = ({team}) => {
                     <CreatedAt>Created {created_at}</CreatedAt>
                 </NameContainer>
                 <FavouriteStarIcon/>
-                <Description>{description.slice(0, 76)} ...</Description>
+                <Description>{description.slice(0, 70)} ...</Description>
             </Header>            
             <Details>
                 <CampaignIcon/>
