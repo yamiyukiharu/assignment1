@@ -11,9 +11,9 @@ import SideBarButton from '../side-bar-button/side-bar-button.component';
 const SideBar = () => {
     return(
         <SideBarContainer>
-            <SideBarButton type='logo' icon={LogoIcon}/>
+            <SideBarButton  type='logo' icon={LogoIcon}/>
             <SideBarButton icon={CampaignIcon}/>
-            <SideBarButton icon={TeamsIcon}/>
+            <SideBarButton selected={true} icon={TeamsIcon}/>
             <SideBarButton icon={LeadsIcon}/>
             <SideBarButton icon={ReportsIcon}/>
             <Spacer/>

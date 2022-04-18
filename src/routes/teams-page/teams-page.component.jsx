@@ -7,11 +7,13 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTeamsArray } from "../../store/teams/teams.actions";
 import { selectCategorizedAndFilteredTeams } from "../../store/teams/teams.selector";
+import { selectActivities } from "../../store/activity/activity.selector";
+import { setActivities } from "../../store/activity/activity.actions";
 
 
 const TeamsPage = () => {
     const dispatch = useDispatch();
-    const [activities, setActivities] = useState([]);
+    const activities = useSelector(selectActivities);
     const teams = useSelector(selectCategorizedAndFilteredTeams);
 
     useEffect(() => {
@@ -24,12 +26,13 @@ const TeamsPage = () => {
 
     useEffect(() => {
       const getActivities = async () => {
-        const activities = await getActivityData();
-        setActivities(activities);
+        const data = await getActivityData();
+        dispatch(setActivities(data));
       }
+      getActivities();
       const intervalId = setInterval(getActivities, 5000);
       return () => clearInterval(intervalId);
-    }, [])
+    }, [dispatch])
 
     return (
         <TeamsPageContainer>

@@ -10,19 +10,11 @@ import {
   ProfilePic,
   DropdownIcon,
 } from "./nav-bar.styles";
-import { useEffect, useState } from "react";
-import { getCurrentUserData } from '../../utils/backend/backend.utils'
+import { useSelector } from "react-redux";
+import { selectCurrentUser } from '../../store/user/user.selector'
 
 const NavBar = () => {
-  const [currentUser, setCurrentUser] = useState({});
-  
-  useEffect(() => {
-    const getCurrentUser = async () => {
-      const data = await getCurrentUserData()
-      setCurrentUser(data)
-    }
-    getCurrentUser();
-  }, [])
+  const currentUser = useSelector(selectCurrentUser)
 
   return (
     <NavBarContainer>

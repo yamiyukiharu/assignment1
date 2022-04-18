@@ -1,0 +1,5 @@
+const ACTIVITY_ACTION_TYPES = {
+    SET_ACTIVITIES: 'activity/SET_ACTIVITIES',
+};
+
+export default ACTIVITY_ACTION_TYPES;
