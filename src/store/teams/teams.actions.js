@@ -16,7 +16,7 @@ export const setTeamsFilter = (searchFilter) => createAction(
 export const setTeamsFavourite = (teams, teamId, isFavourite) => {
     const newTeams = teams.map((team) => (
         team.id === teamId 
-        ? {...team, is_favourited:isFavourite}
+        ? {...team, is_favorited:isFavourite}
         : {...team}
     ))
     return(createAction(

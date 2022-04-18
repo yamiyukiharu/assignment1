@@ -22,11 +22,13 @@ export const selectCategorizedAndFilteredTeams = createSelector(
         } else if (category === TEAMS_CATEGORIES.ARCHIVED) {
             filteredTeams = teamsArray.filter((team) => team.is_archived)
         } 
-        console.log(teamsArray)
+        console.log(teamsFilter)
         if (teamsFilter === '') {
             return(filteredTeams)
         } else {
-            return (filteredTeams.filter((team) => team.name.includes(teamsFilter)))
+            return (filteredTeams.filter(
+                (team) => team.name.toLowerCase().includes(teamsFilter)
+            ))
         }
     }
 )
