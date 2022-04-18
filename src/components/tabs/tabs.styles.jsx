@@ -14,7 +14,12 @@ export const Tab = styled.div`
     text-align: center;
     font-size: 18px;
     color: ${({isSelected}) => isSelected ? '#0083E3': '#000000'};
-    border-bottom: ${({isSelected}) => isSelected? '3px solid #0083E3' : '3px solid transparent'};
+    transition: border 1s;
+
+    border-bottom: ${({isSelected}) => 
+        isSelected 
+        ? '3px solid #0083E3' 
+        : '3px solid transparent'};
 
     &:hover {
         color: #0083E3;
