@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const TabsContainer = styled.div`
+export const ScTabsContainer = styled.div`
     display: flex;
     align-items: flex-end;
 `;
 
-export const Tab = styled.div`
+export const ScTabContainer = styled.div`
     box-sizing: border-box;
     height: 100%;
     display: flex;
@@ -14,7 +14,7 @@ export const Tab = styled.div`
     text-align: center;
     font-size: 18px;
     color: ${({isSelected}) => isSelected ? '#0083E3': '#000000'};
-    transition: border 1s;
+    transition: border 0.5s;
 
     border-bottom: ${({isSelected}) => 
         isSelected 
@@ -24,6 +24,6 @@ export const Tab = styled.div`
     &:hover {
         color: #0083E3;
         cursor: pointer;
-        opacity: 0.6;
+        opacity: ${({isSelected}) => isSelected ? 1.0 : 0.6};
     }
 `;
