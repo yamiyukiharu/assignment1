@@ -45,7 +45,7 @@ export const ScFavouriteStarIcon = styled(StarIconSvg)`
     height: 16px;
     width: 16px;
 
-    color: transparent;
+    color: ${({isFavorited}) => isFavorited ? '#F8CE43' : 'transparent'};
     
     &:hover {
         color: #F8CE43;
@@ -108,6 +108,7 @@ export const ScTeamCardContainer = styled.div`
     display: flex;
     flex-direction: column;
     transition: all 0.2s;
+    background-color: ${({isArchived}) => isArchived ? '#EBEEF2' : '#FFFFFF'};
 
     &:hover {
         border: 1px solid #0083E3;

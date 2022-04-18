@@ -23,9 +23,7 @@ const TeamsReducer = (state = TEAMS_INITIAL_STATE, action) => {
         case TEAMS_ACTION_TYPES.SET_TEAMS_FILTER:
             return {...state, teamsFilter:payload}
         case TEAMS_ACTION_TYPES.SET_TEAMS_FAVOURITE:
-            return {...state, teams: payload}
-        case TEAMS_ACTION_TYPES.SET_TEAMS_ARCHIVED:
-            return {...state, teams: payload}
+            return {...state, teamsArray: payload}
         default:
             return state;
     }

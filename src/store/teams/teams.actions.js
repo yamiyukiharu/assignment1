@@ -22,13 +22,3 @@ export const setTeamsFavourite = (teams, teamId, isFavourite) => {
     return(createAction(
         TEAMS_ACTION_TYPES.SET_TEAMS_FAVOURITE, newTeams))
 }
-
-export const setTeamsArchived = (teams, teamId, isArchived) => {
-    const newTeams = teams.map((team) => (
-        team.id === teamId 
-        ? {...team, is_archived:isArchived}
-        : {...team}
-    ))
-    return(createAction(
-        TEAMS_ACTION_TYPES.SET_TEAMS_ARCHIVED, newTeams))
-}
