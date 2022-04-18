@@ -4,55 +4,44 @@ import { ReactComponent as LeadsIconSvg} from '../../assets/icon-leads-small.svg
 import { ReactComponent as CampaignIconSvg} from '../../assets/icon-conversations-small.svg'
 
 
-export const TeamCardContainer = styled.div`
-    box-sizing: border-box;
-    height: 181px;
-    width: 307px;
-    border: 1px solid #E4E7EC;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-`;
-
-
-export const Header = styled.div`
+export const ScHeader = styled.div`
     padding: 0px 14px 0px 16px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #E4E7EC;
 `;
 
-export const HeaderRow = styled.div`
+export const ScHeaderRow = styled.div`
     margin-top: 16px;
     display: flex;
 
 `;
 
-export const Avatar = styled.img`
+export const ScAvatar = styled.img`
     margin-right: 9px;
     height: 36px;
     width: 36px;
     border-radius: 3px;
 `;
 
-export const Name = styled.div`
+export const ScName = styled.div`
     color: #444444;
     font-size: 16px;
     font-weight: bold;
 `;
 
-export const CreatedAt = styled.div`
+export const ScCreatedAt = styled.div`
     color: #565656;
     font-size: 13px;
     opacity: 0.5;
 
 `;
 
-export const NameContainer = styled.div`
+export const ScNameContainer = styled.div`
     margin-right: auto;
 `
 
-export const FavouriteStarIcon = styled(StarIconSvg)`
+export const ScFavouriteStarIcon = styled(StarIconSvg)`
     height: 16px;
     width: 16px;
 
@@ -62,9 +51,10 @@ export const FavouriteStarIcon = styled(StarIconSvg)`
         color: #F8CE43;
         opacity: 0.6;
     }
+    
 `;
 
-export const Description = styled.div`
+export const ScDescription = styled.div`
     color: #565656;
     font-size: 14px;
     margin-top: 16px;
@@ -77,23 +67,57 @@ export const Description = styled.div`
     -webkit-box-orient: vertical;
 `;
 
-export const Details = styled.div`
+export const ScMarketingDataContainer = styled.div`
     box-sizing: border-box;
     height: 59px;
     padding-left: 17px;
     display: flex;
     align-items: center;
     column-gap: 10px;
-    opacity: 0.45;
     font-size: 13px;
 `;
 
-export const CampaignIcon = styled(CampaignIconSvg)`
+export const ScMarketingData = styled.div`
+    column-gap: 10px;
+    display: flex;
+    align-items: center;
+    opacity: 0.45;
+
+    &:hover {
+        opacity: 0.9;
+        
+    }
+`
+
+export const ScCampaignIcon = styled(CampaignIconSvg)`
     height: 16px;
     width: 15px;
 `;
 
-export const LeadsIcon = styled(LeadsIconSvg)`
+export const ScLeadsIcon = styled(LeadsIconSvg)`
     height: 16px;
     width: 14px;
+`;
+
+export const ScTeamCardContainer = styled.div`
+    box-sizing: border-box;
+    height: 181px;
+    width: 307px;
+    border: 1px solid #E4E7EC;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s;
+
+    &:hover {
+        border: 1px solid #0083E3;
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+
 `;

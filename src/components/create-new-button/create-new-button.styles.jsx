@@ -10,10 +10,16 @@ export const CreateNewButtonContainer = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 4px;
+    transition: transform 0.2s;
 
     &:hover {
         background: #20B29F;
         cursor: pointer;
+        transform: scale(1.02);
+    }
+
+    &:active {
+        transform: scale(1.00);
     }
 `;
 

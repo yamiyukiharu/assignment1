@@ -1,11 +1,5 @@
 import styled from "styled-components"
 
-export const ScActivityEntryContainer = styled.div`
-    display: flex;
-    column-gap: 9px;
-    height: 59px;
-`;
-
 export const ScAvatar = styled.img`
     height: 36px;
     width: 36px;
@@ -27,4 +21,24 @@ export const ScCreatedAt = styled.div`
     color: #565656;
     font-size: 13px;
     opacity: 0.5;
+`;
+
+export const ScActivityEntryContainer = styled.div`
+    display: flex;
+    column-gap: 9px;
+    height: 59px;
+    transition: all 0.07s linear;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        ${ScActionContainer} {
+            color: #0083E3;
+            
+        }
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
 `;
