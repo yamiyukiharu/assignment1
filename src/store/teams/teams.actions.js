@@ -2,7 +2,7 @@ import { createAction } from '../../utils/reducer/reducer.utils';
 import TEAMS_ACTION_TYPES from "./teams.types";
 
 export const setTeamsArray = (teams) => createAction(
-    TEAMS_ACTION_TYPES.SET_TEAMS, teams
+    TEAMS_ACTION_TYPES.SET_TEAMS_ARRAY, teams
 )
 
 export const setTeamsCategory = (category) => createAction(

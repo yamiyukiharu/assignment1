@@ -16,11 +16,17 @@ export const selectCategorizedAndFilteredTeams = createSelector(
     [selectTeamsArray, selectTeamsCategory, selectTeamsFilter],
     (teamsArray, category, teamsFilter) => {
         let filteredTeams = teamsArray;
+        
         if (category === TEAMS_CATEGORIES.FAVOURITES) {
-            filteredTeams = teamsArray.filter((team) => team.is_favourited)
+            filteredTeams = teamsArray.filter((team) => team.is_favorited)
         } else if (category === TEAMS_CATEGORIES.ARCHIVED) {
             filteredTeams = teamsArray.filter((team) => team.is_archived)
         } 
-        return filteredTeams.filter((team) => team.name.includes(teamsFilter))
+        console.log(teamsArray)
+        if (teamsFilter === '') {
+            return(filteredTeams)
+        } else {
+            return (filteredTeams.filter((team) => team.name.includes(teamsFilter)))
+        }
     }
 )

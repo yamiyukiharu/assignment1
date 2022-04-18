@@ -9,7 +9,7 @@ const ActivityCard = ({activities}) => {
             <ScHeader>Activity</ScHeader>
             <ScEntryContainer>
             {
-                activities.map((activity, idx) => <ActivityCardEntry key={idx} activity={activity}/>)
+                activities.map((activity) => <ActivityCardEntry key={activity.id} activity={activity}/>)
             }
             </ScEntryContainer>
             

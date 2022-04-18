@@ -1,42 +1,38 @@
 import TeamPageHeader from "../../components/team-page-header/team-page-header.component";
 import TeamsCardList from "../../components/teams-card-list/teams-card-list.component";
 import { TeamsPageContainer, TeamsPageContent } from "./teams-page.styles";
-
-import AppDataJson from '../../utils/app-data';
-import { useState } from "react";
 import ActivityCard from "../../components/activity-card/activity-card.component";
+import { getActivityData, getTeamsData } from "../../utils/backend/backend.utils";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setTeamsArray } from "../../store/teams/teams.actions";
+import { selectCategorizedAndFilteredTeams } from "../../store/teams/teams.selector";
 
-
-function useWindowDimensions() {
-    const [width, setWidth] = useState(window.innerWidth);
-    const [height, setHeight] = useState(window.innerHeight);
-  
-    useState(() => {
-      const listener = () => {
-        setWidth(window.innerWidth)
-        setHeight(window.innerHeight)
-      }
-  
-      window.addEventListener('resize', listener);
-  
-      return () => {
-        window.removeEventListener('resize', listener);
-      }
-    })
-  
-    return {width, height}
-  }
 
 const TeamsPage = () => {
-    const {teams, activities} = AppDataJson;
-    const {width} = useWindowDimensions();
+    const dispatch = useDispatch()
+    const teams = useSelector(selectCategorizedAndFilteredTeams)
+
+    useEffect(() => {
+      const getTeamsArray = async () => {
+        const teamsArray = await getTeamsData();
+        dispatch(setTeamsArray(teamsArray));
+      };
+
+      const getActivities = async () => {
+        const activities = await getActivityData();
+      }
+
+      getTeamsArray();
+      getActivities();
+    }, [dispatch])
 
     return (
         <TeamsPageContainer>
             <TeamPageHeader/>
             <TeamsPageContent>
-                <TeamsCardList pageWidth={width} teams={teams}/>
-                <ActivityCard activities={activities}/>
+                <TeamsCardList teams={teams}/>
+                 
             </TeamsPageContent>
         </TeamsPageContainer>
     )

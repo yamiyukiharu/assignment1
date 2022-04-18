@@ -36,7 +36,9 @@ const TeamCard = ({ team }) => {
           <ScAvatar src={image} />
           <ScNameContainer>
             <ScName>{name}</ScName>
-            <ScCreatedAt>Created {created_at}</ScCreatedAt>
+            {
+              created_at && <ScCreatedAt>Created {created_at}</ScCreatedAt>
+            }
           </ScNameContainer>
           <ScFavouriteStarIcon />
         </ScHeaderRow>
