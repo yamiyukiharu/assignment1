@@ -13,6 +13,7 @@ export const ScTabContainer = styled.div`
     padding: 0px 20px 0px 20px;
     text-align: center;
     font-size: 18px;
+    font-weight: 500;
     color: ${({isSelected}) => isSelected ? '#0083E3': '#000000'};
     transition: border 0.5s;
 
