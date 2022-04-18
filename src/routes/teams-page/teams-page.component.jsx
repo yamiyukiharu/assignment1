@@ -28,7 +28,7 @@ function useWindowDimensions() {
   }
 
 const TeamsPage = () => {
-    const {teams} = AppDataJson;
+    const {teams, activities} = AppDataJson;
     const {width} = useWindowDimensions();
 
     return (
@@ -36,7 +36,7 @@ const TeamsPage = () => {
             <TeamPageHeader/>
             <TeamsPageContent>
                 <TeamsCardList pageWidth={width} teams={teams}/>
-                <ActivityCard/>
+                <ActivityCard activities={activities}/>
             </TeamsPageContent>
         </TeamsPageContainer>
     )

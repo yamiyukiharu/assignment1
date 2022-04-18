@@ -1,6 +1,0 @@
-const CONSTANTS = {
-    TEAMS_CARD_WIDTH: 307,
-    ACTIVITY_CARD_WIDTH: 316,
-};
-
-export default CONSTANTS;

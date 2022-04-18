@@ -12,9 +12,8 @@ export const TeamCardContainer = styled.div`
     border-radius: 4px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    flex-shrink: 0;
 `;
+
 
 export const Header = styled.div`
     padding: 0px 14px 0px 16px;

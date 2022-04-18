@@ -4,6 +4,7 @@ import { Header, ShowingItemsHint, TeamsCardListContainer, Title, Cards } from "
 
 const TeamsCardList = ({pageWidth, teams}) => {
 
+
     return (
         <TeamsCardListContainer pageWidth={pageWidth}>
             <Header>

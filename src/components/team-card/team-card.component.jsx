@@ -1,4 +1,4 @@
-import { Avatar, TeamCardContainer, CreatedAt, Description, Details, Header, Name, NameContainer, FavouriteStarIcon, CampaignIcon, LeadsIcon, HeaderRow } from "./team-card.styles";
+import { EmptyCardFiller, Avatar, TeamCardContainer, CreatedAt, Description, Details, Header, Name, NameContainer, FavouriteStarIcon, CampaignIcon, LeadsIcon, HeaderRow } from "./team-card.styles";
 
 
 const TeamCard = ({team}) => {
@@ -36,5 +36,6 @@ const TeamCard = ({team}) => {
         </TeamCardContainer>
     )
 }
+
 
 export default TeamCard;
