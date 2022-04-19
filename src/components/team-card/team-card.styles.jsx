@@ -102,13 +102,22 @@ export const ScLeadsIcon = styled(LeadsIconSvg)`
 export const ScTeamCardContainer = styled.div`
     box-sizing: border-box;
     height: 181px;
-    width: 307px;
+    width: 270px;
     border: 1px solid #E4E7EC;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
+    flex-grow:1;
     transition: all 0.2s;
     background-color: ${({isArchived}) => isArchived ? '#EBEEF2' : '#FFFFFF'};
+    
+    animation: appear 0.2s linear 0s 1 forwards;
+
+    @keyframes appear {
+        from {
+            opacity: 0.1;
+        }
+    }
 
     &:hover {
         border: 1px solid #0083E3;
@@ -122,3 +131,5 @@ export const ScTeamCardContainer = styled.div`
 
 
 `;
+
+

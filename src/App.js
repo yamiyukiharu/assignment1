@@ -21,7 +21,6 @@ export const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Layout/>}>
-        <Route index element={<TeamsPage/>}/>
         <Route path='home' element={<div/>}/>
         <Route path='campaigns' element={<div/>}/>
         <Route path='teams' element={<TeamsPage/>}/>

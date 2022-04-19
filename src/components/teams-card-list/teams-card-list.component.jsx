@@ -1,5 +1,5 @@
 import TeamCard from "../team-card/team-card.component";
-import { Header, ShowingItemsHint, TeamsCardListContainer, Title, Cards } from "./teams-card-list.styles";
+import { Cell, Header, ShowingItemsHint, TeamsCardListContainer, Title, Cards } from "./teams-card-list.styles";
 
 
 const TeamsCardList = ({teams}) => {
@@ -12,7 +12,7 @@ const TeamsCardList = ({teams}) => {
             </Header>
             <Cards>
                 {
-                    teams.map((team) => <TeamCard key={team.id} team={team}/>)
+                    teams.map((team) => <Cell><TeamCard key={team.id} team={team}/></Cell>)
                 }
             </Cards>
         </TeamsCardListContainer>
