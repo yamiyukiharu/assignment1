@@ -9,9 +9,9 @@ export const SideBarButtonContainer = styled.div`
     align-items: center;
     cursor: pointer;
     color: white;
-    background: ${({selected}) => selected ? '#2995DA' : 'none'};
-
-    opacity: ${({type, selected}) => type === 'logo' || selected ? 1.0 : 0.3};
+    background: ${({active}) => active ? '#2995DA' : 'none'};
+    
+    opacity: ${({type, active}) => type === 'logo' || active ? 1.0 : 0.3};
 
     &:hover {
         opacity: 1.0;
