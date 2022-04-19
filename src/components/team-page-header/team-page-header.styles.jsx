@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { ReactComponent as TeamsIconSvg } from '../../assets/icon-teams.svg'
 
-export const TeamPageHeaderContainer = styled.div`
+export const ScTeamPageHeaderContainer = styled.div`
     box-sizing: border-box;
     height: 156px;
     width: 100%;
@@ -14,7 +14,7 @@ export const TeamPageHeaderContainer = styled.div`
     
 `;
 
-export const FirstRow = styled.div`
+export const ScFirstRow = styled.div`
     box-sizing: border-box;
     height: 34px;
     width: 100%;
@@ -22,7 +22,7 @@ export const FirstRow = styled.div`
 
 `;
 
-export const SecondRow = styled.div`
+export const ScSecondRow = styled.div`
     box-sizing: border-box;
     height: 50px;
     display: flex;
@@ -30,18 +30,18 @@ export const SecondRow = styled.div`
     
 `;
 
-export const TeamsIcon = styled(TeamsIconSvg)`
+export const ScTeamsIcon = styled(TeamsIconSvg)`
     color: #A4A6A8;
     height: 34px;
     width: 34px;
     margin-right: 5px;
 `;
 
-export const Title = styled.span`
+export const ScTitle = styled.span`
     color: #1A1919;
     font-size: 30px;
 `;
 
-export const Spacer = styled.div`
+export const ScSpacer = styled.div`
     flex-grow: 1;
 `;

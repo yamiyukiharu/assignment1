@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../nav-bar/nav-bar.component";
 import SideBar from "../side-bar/side-bar.component";
-import { LayoutContainer, Page } from "./layout.styles";
+import { ScLayoutContainer, ScPage } from "./layout.styles";
 
 export const Layout = () => {
-    return (
-      <LayoutContainer>
-        <SideBar/>  
-        <Page>
-          <NavBar/>  
-          <Outlet/>        
-        </Page>      
-      </LayoutContainer>
-    )
-  }
+  return (
+    <ScLayoutContainer>
+      <SideBar />
+      <ScPage>
+        <NavBar />
+        <Outlet />
+      </ScPage>
+    </ScLayoutContainer>
+  );
+};

@@ -1,17 +1,19 @@
-import { Icon, NotificationBadge, NotificationIconContainer } from "./notification-icon.styles";
-import {ReactComponent as IconSvg} from '../../assets/icon-mail.svg'
+import {
+  ScIconContainer,
+  ScNotificationBadge,
+  ScNotificationIconContainer,
+} from "./notification-icon.styles";
+import { ReactComponent as MailIcon } from "../../assets/icon-mail.svg";
 
-const NotificationIcon = ({count}) => {
-    return(
-        <NotificationIconContainer>
-
-            <NotificationBadge> {count} </NotificationBadge>
-            <Icon>
-                <IconSvg height='22' widht='22'/>    
-            </Icon>
-        </NotificationIconContainer>
-    )
-
-}
+const NotificationIcon = ({ count }) => {
+  return (
+    <ScNotificationIconContainer>
+      <ScNotificationBadge> {count} </ScNotificationBadge>
+      <ScIconContainer>
+        <MailIcon height="22" widht="22" />
+      </ScIconContainer>
+    </ScNotificationIconContainer>
+  );
+};
 
 export default NotificationIcon;

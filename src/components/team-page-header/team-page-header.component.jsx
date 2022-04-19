@@ -1,25 +1,31 @@
 import CreateNewButton from "../create-new-button/create-new-button.component";
 import SearchBar from "../search-bar/search-bar.component";
 import Tabs from "../tabs/tabs.componenet";
-import { TeamPageHeaderContainer, TeamsIcon, Title, Spacer, FirstRow, SecondRow } from "./team-page-header.styles";
-
+import {
+  ScTeamPageHeaderContainer,
+  ScTeamsIcon,
+  ScTitle,
+  ScSpacer,
+  ScFirstRow,
+  ScSecondRow,
+} from "./team-page-header.styles";
 
 const TeamPageHeader = () => {
-    return (
-        <TeamPageHeaderContainer>
-            <FirstRow>
-                <TeamsIcon/>
-                <Title>Teams</Title>
-                <Spacer/>
-                <CreateNewButton text='CREATE NEW TEAM'/>
-            </FirstRow>
-            <SecondRow>
-                <Tabs tabNames={['All', 'Favourites', 'Archived']}/>
-                <Spacer/>
-                <SearchBar/>
-            </SecondRow>
-        </TeamPageHeaderContainer>
-    )
-}
+  return (
+    <ScTeamPageHeaderContainer>
+      <ScFirstRow>
+        <ScTeamsIcon />
+        <ScTitle>Teams</ScTitle>
+        <ScSpacer />
+        <CreateNewButton text="CREATE NEW TEAM" />
+      </ScFirstRow>
+      <ScSecondRow>
+        <Tabs tabNames={["All", "Favourites", "Archived"]} />
+        <ScSpacer />
+        <SearchBar />
+      </ScSecondRow>
+    </ScTeamPageHeaderContainer>
+  );
+};
 
 export default TeamPageHeader;

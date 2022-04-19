@@ -16,8 +16,8 @@ import {
   ScMarketingDataContainer,
   ScMarketingData,
 } from "./team-card.styles";
-import { setTeamsFavourite } from '../../store/teams/teams.actions';
-import { selectTeamsArray } from '../../store/teams/teams.selector';
+import { setTeamsFavourite } from "../../store/teams/teams.actions";
+import { selectTeamsArray } from "../../store/teams/teams.selector";
 
 const TeamCard = ({ team }) => {
   const {
@@ -33,11 +33,11 @@ const TeamCard = ({ team }) => {
   } = team;
 
   const dispatch = useDispatch();
-  const teams = useSelector(selectTeamsArray)
+  const teams = useSelector(selectTeamsArray);
 
   const favoriteHandler = () => {
-    dispatch(setTeamsFavourite(teams,id,!is_favorited))
-  }
+    dispatch(setTeamsFavourite(teams, id, !is_favorited));
+  };
 
   return (
     <ScTeamCardContainer isArchived={is_archived}>
@@ -46,16 +46,14 @@ const TeamCard = ({ team }) => {
           <ScAvatar src={image} />
           <ScNameContainer>
             <ScName>{name}</ScName>
-            {
-              created_at && <ScCreatedAt>Created {created_at}</ScCreatedAt>
-            }
+            {created_at && <ScCreatedAt>Created {created_at}</ScCreatedAt>}
           </ScNameContainer>
-          {
-            !is_archived && <ScFavouriteStarIcon 
-                                isFavorited={is_favorited}
-                                onClick={favoriteHandler}/>
-          }
-          
+          {!is_archived && (
+            <ScFavouriteStarIcon
+              isFavorited={is_favorited}
+              onClick={favoriteHandler}
+            />
+          )}
         </ScHeaderRow>
         <ScDescription>{description} </ScDescription>
       </ScHeader>

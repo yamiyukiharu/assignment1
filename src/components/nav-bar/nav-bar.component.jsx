@@ -1,35 +1,32 @@
 import NotificationIcon from "../notification-icon/notification-icon.component";
-import {ReactComponent as CarretIcon} from '../../assets/caret-down.svg'
+import { ReactComponent as CarretIcon } from "../../assets/caret-down.svg";
 import {
-  NavBarContainer,
-  AppName,
-  Divider,
-  Title,
-  MenuSettingsContainer,
-  Greeting,
-  ProfilePic,
-  DropdownIcon,
+  ScNavBarContainer,
+  ScAppName,
+  ScDivider,
+  ScTitle,
+  ScMenuSettingsContainer,
+  ScGreeting,
+  ScProfilePic,
 } from "./nav-bar.styles";
 import { useSelector } from "react-redux";
-import { selectCurrentUser } from '../../store/user/user.selector'
+import { selectCurrentUser } from "../../store/user/user.selector";
 
 const NavBar = () => {
-  const currentUser = useSelector(selectCurrentUser)
+  const currentUser = useSelector(selectCurrentUser);
 
   return (
-    <NavBarContainer>
-      <AppName>NARWHAL</AppName>
-      <Divider />
-      <Title>Teams</Title>
-      <NotificationIcon count={currentUser.notifications_count}/>
-      <MenuSettingsContainer>
-        <Greeting> Hello, {currentUser.name} </Greeting>
-        <ProfilePic src={currentUser.avatar}/>
-        <DropdownIcon>
-          <CarretIcon />
-        </DropdownIcon>
-      </MenuSettingsContainer>
-    </NavBarContainer>
+    <ScNavBarContainer>
+      <ScAppName>NARWHAL</ScAppName>
+      <ScDivider />
+      <ScTitle>Teams</ScTitle>
+      <NotificationIcon count={currentUser.notifications_count} />
+      <ScMenuSettingsContainer>
+        <ScGreeting> Hello, {currentUser.name} </ScGreeting>
+        <ScProfilePic src={currentUser.avatar} />
+        <CarretIcon />
+      </ScMenuSettingsContainer>
+    </ScNavBarContainer>
   );
 };
 
