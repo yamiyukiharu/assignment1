@@ -7,13 +7,19 @@ import { ReactComponent as ReportsIcon } from "../../assets/icon-reports.svg";
 import { ReactComponent as HelpIcon } from "../../assets/icon-help.svg";
 
 import SideBarButton from "../side-bar-button/side-bar-button.component";
+import { useEffect, useRef } from "react";
 
 const SideBar = () => {
+  const ref = useRef()
+  useEffect(() => {
+    ref.current.click();
+  },[])
+
   return (
     <ScSideBarContainer>
       <SideBarButton path="home" type="logo" icon={LogoIcon} />
       <SideBarButton path="campaigns" icon={CampaignIcon} />
-      <SideBarButton path="teams" icon={TeamsIcon} />
+      <SideBarButton refer={ref} path="teams" icon={TeamsIcon} />
       <SideBarButton path="leads" icon={LeadsIcon} />
       <SideBarButton path="reports" icon={ReportsIcon} />
       <ScSpacer />

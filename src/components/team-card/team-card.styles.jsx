@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as StarIconSvg } from "../../assets/icon-star-default.svg";
 import { ReactComponent as LeadsIconSvg } from "../../assets/icon-leads-small.svg";
 import { ReactComponent as CampaignIconSvg } from "../../assets/icon-conversations-small.svg";
 
@@ -38,15 +37,17 @@ export const ScNameContainer = styled.div`
   margin-right: auto;
 `;
 
-export const ScFavouriteStarIcon = styled(StarIconSvg)`
-  height: 16px;
-  width: 16px;
+export const ScStarIconContainer = styled.div`
+  svg {
+    height: 16px;
+    width: 16px;
 
-  color: ${({ isFavorited }) => (isFavorited ? "#F8CE43" : "transparent")};
+    color: ${({ isFavorited }) => (isFavorited ? "#F8CE43" : "transparent")};
 
-  &:hover {
-    color: #f8ce43;
-    opacity: 0.6;
+    &:hover {
+      color: #f8ce43;
+      opacity: 0.6;
+    }
   }
 `;
 

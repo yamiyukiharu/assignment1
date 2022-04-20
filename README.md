@@ -20,6 +20,13 @@ You are expected to interface with a mock API response that you can find at the 
 - react-router
 - reselect
 
+# Steps to build 
+1. Clone the repo
+2. Start a terminal in the repo folder
+3. run `yarn install`
+4. run `yarn start`
+
+
 # Possible improvements
 - typescript
 - unit testing

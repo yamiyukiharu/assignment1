@@ -1,21 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import {
-  ScEmptyCardFiller,
   ScAvatar,
   ScTeamCardContainer,
   ScCreatedAt,
   ScDescription,
-  ScDetails,
   ScHeader,
   ScName,
   ScNameContainer,
-  ScFavouriteStarIcon,
+  ScStarIconContainer,
   ScCampaignIcon,
   ScLeadsIcon,
   ScHeaderRow,
   ScMarketingDataContainer,
   ScMarketingData,
 } from "./team-card.styles";
+import { ReactComponent as StarIcon } from "../../assets/icon-star-default.svg";
 import { setTeamsFavourite } from "../../store/teams/teams.actions";
 import { selectTeamsArray } from "../../store/teams/teams.selector";
 
@@ -49,10 +48,9 @@ const TeamCard = ({ team }) => {
             {created_at && <ScCreatedAt>Created {created_at}</ScCreatedAt>}
           </ScNameContainer>
           {!is_archived && (
-            <ScFavouriteStarIcon
-              isFavorited={is_favorited}
-              onClick={favoriteHandler}
-            />
+            <ScStarIconContainer isFavorited={is_favorited} onClick={favoriteHandler}>
+              <StarIcon/>
+            </ScStarIconContainer>
           )}
         </ScHeaderRow>
         <ScDescription>{description} </ScDescription>

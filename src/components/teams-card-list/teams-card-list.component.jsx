@@ -18,9 +18,9 @@ const TeamsCardList = ({ teams }) => {
         </ScShowingItemsHint>
       </ScHeader>
       <ScCards>
-        {teams.map((team) => (
-          <ScGridCell>
-            <TeamCard key={team.id} team={team} />
+        {teams.map((team, idx) => (
+          <ScGridCell key={idx}>
+            <TeamCard team={team} />
           </ScGridCell>
         ))}
       </ScCards>
